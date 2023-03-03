@@ -17,4 +17,12 @@ public class Boton extends Recurso{
     public void setPagina(Pagina pagina) {
         this.pagina = pagina;
     }
+
+    @Override
+    public String toString() {
+        return "Boton{" +
+                "texto='" + texto + '\'' +
+                ", pagina=" + pagina +
+                "} " + super.toString();
+    }
 }

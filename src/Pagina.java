@@ -1,4 +1,4 @@
-public class Pagina {
+public class Pagina extends Recurso{
     private String nombre;
     private boolean isModal;
 
@@ -10,11 +10,22 @@ public class Pagina {
         this.nombre = nombre;
     }
 
-    public boolean isModal() {
+    public boolean isModal(String s) {
         return isModal;
     }
 
-    public void setModal(boolean modal) {
-        isModal = modal;
+    public void setModal(String modal) {
+        if (modal.equalsIgnoreCase("S"))
+            this.isModal = true;
+        else
+            this.isModal = false;
+    }
+
+    @Override
+    public String toString() {
+        return "Pagina{" +
+                "nombre='" + nombre + '\'' +
+                ", isModal=" + isModal +
+                "} " + super.toString();
     }
 }

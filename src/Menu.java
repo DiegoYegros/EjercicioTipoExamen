@@ -14,7 +14,20 @@ public class Menu extends Recurso{
         return padre;
     }
 
-    public void setPadre(boolean padre) {
-        this.padre = padre;
+    public void setPadre(String s) {
+        if (s.equalsIgnoreCase("S")){
+            this.padre = true;
+        }
+        else{
+            this.padre = false;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Menu{" +
+                "descripcion='" + descripcion + '\'' +
+                ", padre=" + padre +
+                "} " + super.toString();
     }
 }
