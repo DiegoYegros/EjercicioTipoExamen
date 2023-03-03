@@ -15,10 +15,7 @@ public class Pagina extends Recurso{
     }
 
     public void setModal(String modal) {
-        if (modal.equalsIgnoreCase("S"))
-            this.isModal = true;
-        else
-            this.isModal = false;
+        this.isModal = modal.equalsIgnoreCase("S");
     }
 
     @Override

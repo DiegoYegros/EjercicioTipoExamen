@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Tests {
     public static void main(String[] args) {
     ManejadorRecursos manejadorRecursos = new ManejadorRecursos();
+    ProcesarRecursos procesarRecursos = new ProcesarRecursos();
     try {
         Scanner scanner = new Scanner(new File(Globals.MENUS));
         while (scanner.hasNextLine()) {
@@ -23,6 +24,7 @@ public class Tests {
     } catch (FileNotFoundException e) {
         throw new RuntimeException(e);
     }
+
     try {
         Scanner scanner = new Scanner(new File(Globals.PAGINAS));
         while (scanner.hasNextLine()) {
@@ -39,6 +41,7 @@ public class Tests {
     } catch (FileNotFoundException e) {
         throw new RuntimeException(e);
     }
+
     try {
         Scanner scanner = new Scanner(new File(Globals.BOTONES));
         while (scanner.hasNextLine()) {
@@ -58,7 +61,6 @@ public class Tests {
     } catch (FileNotFoundException e) {
         throw new RuntimeException(e);
     }
-    ProcesarRecursos procesarRecursos = new ProcesarRecursos();
     procesarRecursos.mostrarRecursos(manejadorRecursos.getRecursos());
-}
+    }
 }
