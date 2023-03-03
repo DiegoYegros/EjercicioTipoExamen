@@ -1,0 +1,2 @@
+1,ABM_GEN,abm-generico.jsp,N
+2,ABM_PER,abm-personas.jsp,N
